@@ -1,0 +1,45 @@
+Protokó³ komunikacyjny:
+
+1. CPCC <=> NCC
+
+WCHODZ¥CE DO NCC:
+
+nawi¹zanie po³¹czenia:
+CallRequest#id_nadawcy#id_odbiorcy
+
+odpowiedŸ na CallAccept:
+CallAccept#id_nadawcy#id_odbiorcy#REJECTION lub CONFIRMATION
+
+zakoñczenie po³¹czenia:
+CallRelease#id_nadawcy#id_odbiorcy
+
+WYCHODZ¥CE Z NCC:
+
+pytanie o akceptacjê po³¹czenia:
+CallAccept#id_nadawcy#id_odbiorcy
+
+informacja o zakoñczeniu po³¹czenia:
+CallRelease#id_nadawcy#id_odbiorcy
+
+odpowiedŸ na CallRequest:
+CallRequest#id_nadawcy#id_odbiorcy#REJECTION lub CONFIRMATION
+
+2. CC <=> NCC
+
+WCHODZ¥CE DO NCC:
+odpowiedŸ na ConnectionRequest:
+ConnectionRequest#id_nadawcy#adres_nadawcy#id_odbiorcy#adres_odbiorcy#REJECTION lub CONFIRMATION
+
+zerwanie po³¹czenia:
+ConnectionRequest#id_nadawcy#adres_nadawcy#id_odbiorcy#adres_odbiorcy#REJECTION
+
+WYCHODZ¥CE Z NCC:
+¿¹danie stworzenia po³¹czenia:
+ConnectionRequest#id_nadawcy#adres_nadawcy#id_odbiorcy#adres_odbiorcy
+
+¿¹danie zwolnienia zasobów:
+ConnectionRequest#id_nadawcy#adres_nadawcy#id_odbiorcy#adres_odbiorcy#REJECTION
+
+UWAGI OGÓLNE:
+id jest w formie nazwa@domena, np. KLIENT1@domena1
+w sieci sygnalizacyjnej wiadomoœci przesy³a siê w taki sposób: Wyslij#id_nadawcy#id_adresata#TREŒÆ i wtedy przed dostarczeniem kable ucinaj¹ pocz¹tek

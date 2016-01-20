@@ -1,0 +1,9 @@
+C:\Users\Mateusz\documents\visual studio 2015\Projects\TSST-Menadżer\TSST-Menadżer\bin\Debug\TSST-Menadżer.exe.config
+C:\Users\Mateusz\documents\visual studio 2015\Projects\TSST-Menadżer\TSST-Menadżer\bin\Debug\TSST-Menadżer.exe
+C:\Users\Mateusz\documents\visual studio 2015\Projects\TSST-Menadżer\TSST-Menadżer\bin\Debug\TSST-Menadżer.pdb
+C:\Users\Mateusz\documents\visual studio 2015\Projects\TSST-Menadżer\TSST-Menadżer\obj\Debug\TSST-Menadzer.csprojResolveAssemblyReference.cache
+C:\Users\Mateusz\documents\visual studio 2015\Projects\TSST-Menadżer\TSST-Menadżer\obj\Debug\TSST_Menadzer.Form1.resources
+C:\Users\Mateusz\documents\visual studio 2015\Projects\TSST-Menadżer\TSST-Menadżer\obj\Debug\TSST_Menadżer.Properties.Resources.resources
+C:\Users\Mateusz\documents\visual studio 2015\Projects\TSST-Menadżer\TSST-Menadżer\obj\Debug\TSST-Menadzer.csproj.GenerateResource.Cache
+C:\Users\Mateusz\documents\visual studio 2015\Projects\TSST-Menadżer\TSST-Menadżer\obj\Debug\TSST-Menadżer.exe
+C:\Users\Mateusz\documents\visual studio 2015\Projects\TSST-Menadżer\TSST-Menadżer\obj\Debug\TSST-Menadżer.pdb

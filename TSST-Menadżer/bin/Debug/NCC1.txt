@@ -1,0 +1,11 @@
+port:
+6666
+id:
+M0
+id_cc:
+CC-0
+domena:
+domena0
+slownik:
+domena0#M0
+domena1#M1

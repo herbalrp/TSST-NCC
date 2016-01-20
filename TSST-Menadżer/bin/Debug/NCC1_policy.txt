@@ -1,0 +1,3 @@
+kamil@0#wojtek#refusal
+daniel@0#wojtek@1#accept
+daniel@0#kamil@0#accept
