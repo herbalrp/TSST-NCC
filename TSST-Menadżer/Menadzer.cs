@@ -66,7 +66,7 @@ namespace TSST_Menadzer
             {
                 kurier.zerwij_polaczenie();
             }
-            kurier = new kurier("127.0.0.1", port, this);
+            kurier = new kurier("192.168.61.98", port, this);
             
         }
 

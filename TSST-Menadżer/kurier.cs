@@ -245,7 +245,7 @@ namespace TSST_Menadzer
             if (potwierdzenie)
             {
                 menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To CC" + menadzer.id_CC + "# ConnectionRequest(" + przekaz[1] + ", " + adres1 + ", " + przekaz[2] + ", " + adres2 + ", " +przekaz[3] +", " + "RELEASE" + ")");
-                wyslij("Sygnalizuj#" + menadzer.id + "#" + menadzer.id_CC + "#ConnectionRequest#" + przekaz[1] + "#" + adres1 + "#" + przekaz[2] + "#" + adres2 + "#0#"+  przekaz[3] + "#" + "#RELEASE");
+                wyslij("Sygnalizuj#" + menadzer.id + "#" + menadzer.id_CC + "#ConnectionRequest#" + przekaz[1] + "#" + adres1 + "#" + przekaz[2] + "#" + adres2 + "#0#"+  przekaz[3] + "#" + "RELEASE");
 
 
                 chec_nawiazania_polaczenia tmp = new chec_nawiazania_polaczenia();
@@ -254,7 +254,7 @@ namespace TSST_Menadzer
                 {
 
                     menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To NCC " + tmp.nas + "# CallCoordination(" + przekaz[1] + "," + przekaz[2] + ", " + przekaz[3]+", " + "RELEASE" + ")");
-                    wyslij("Sygnalizuj#" + menadzer.id + "#" + tmp.nas + "#CallCoordination#" + menadzer.id+"#" + przekaz[1] + "#" + przekaz[2] + "#0#" +przekaz[3] +"#" + "RELEASE" + "#");
+                    wyslij("Sygnalizuj#" + menadzer.id + "#" + tmp.nas + "#CallCoordination#" + menadzer.id+"#" + przekaz[1] + "#" + przekaz[2] + "#0#" +przekaz[3] +"#" + "RELEASE" );
 
                 }
                 else {
@@ -268,7 +268,7 @@ namespace TSST_Menadzer
                 {
 
                     menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To NCC " + tmp.zwr + "# CallCoordination(" + przekaz[1] + "," + przekaz[2] + ", " + "RELEASE" + ")");
-                    wyslij("Sygnalizuj#" + menadzer.id + "#" + tmp.zwr + "#CallCoordination#" + menadzer.id + "#" + przekaz[1] + "#" + przekaz[2] + "#0#" + przekaz[3] + "#" + "RELEASE" + "#");
+                    wyslij("Sygnalizuj#" + menadzer.id + "#" + tmp.zwr + "#CallCoordination#" + menadzer.id + "#" + przekaz[1] + "#" + przekaz[2] + "#0#" + przekaz[3] + "#" + "RELEASE");
 
                 }
 
@@ -317,8 +317,8 @@ namespace TSST_Menadzer
                         }
                         if (potwierdzenie)
                         {
-                            menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To CC" + menadzer.id_CC + "# ConnectionRequest(" + przekaz[2] + ", " + adres1 + ", " + przekaz[3] + ", " + adres2 + ", "+przekaz[4]+ ", "+przekaz[5]+ ")");
-                            wyslij("Sygnalizuj#" + menadzer.id + "#" + menadzer.id_CC + "#ConnectionRequest#" + przekaz[2] + "#" + adres1 + "#" + przekaz[3] + "#" + adres2 + "#" + przekaz[4] + "#" +przekaz[5]);
+                            menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To CC" + menadzer.id_CC + "# ConnectionRequest(" + przekaz[2] + ", " + adres1 + ", " + przekaz[3] + ", " + adres2 + ", "+tmp.przep+ ", "+przekaz[5]+ ")");
+                            wyslij("Sygnalizuj#" + menadzer.id + "#" + menadzer.id_CC + "#ConnectionRequest#" + przekaz[2] + "#" + adres1 + "#" + przekaz[3] + "#" + adres2 + "#" + tmp.przep + "#" +przekaz[5]);
                            
                         }
                        
@@ -329,7 +329,7 @@ namespace TSST_Menadzer
 
                         menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To NCC " + tmp.zwr + "# CallCoordination(" + przekaz[2] + ", " + przekaz[3] +", " + przekaz[4] + ", " + przekaz[5] + ", REJECTION)");
 
-                        wyslij("Sygnalizuj#" + menadzer.id + "#" + tmp.zwr + "#CallCoordination#" + przekaz[2] + "#" + przekaz[3] + "#" + przekaz[4] + "#" + przekaz[5] +"#REJECTION#");
+                        wyslij("Sygnalizuj#" + menadzer.id + "#" + tmp.zwr + "#CallCoordination#"+menadzer.id+"#" + przekaz[2] + "#" + przekaz[3] + "#" + przekaz[4] + "#" + przekaz[5] +"#REJECTION#");
                         release_chec(przekaz[5]);
                     }
                     else if (przekaz[6].Equals("RELEASE"))
@@ -352,7 +352,7 @@ namespace TSST_Menadzer
                         if (potwierdzenie)
                         {
                             menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To CC" + menadzer.id_CC + "# ConnectionRequest(" + przekaz[2] + ", " + adres1 + ", " + przekaz[3] + ", " + adres2 + ", "+przekaz[4] + ", "+przekaz[5]+ ", " + "RELEASE" + ")");
-                            wyslij("Sygnalizuj#" + menadzer.id + "#" + menadzer.id_CC + "#ConnectionRequest#" + przekaz[2] + "#" + adres1 + "#" + przekaz[3] + "#" + adres2 + "#" + przekaz[4] + "#" +przekaz[5]+ "#RELEASE");
+                            wyslij("Sygnalizuj#" + menadzer.id + "#" + menadzer.id_CC + "#ConnectionRequest#" + przekaz[2] + "#" + adres1 + "#" + przekaz[3] + "#" + adres2 + "#" + przekaz[4] + "#" +przekaz[5]+ "RELEASE");
                             menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To " + przekaz[3] + "# CallRelease(" + przekaz[2] + ", " + przekaz[3] + ", "  +przekaz[5]+ ")");
                             string[] split_id = przekaz[2].Split(new char[] { '@' });
                             if (menadzer.czy_jest_w_mojej_podsieci(split_id[0]))
@@ -382,8 +382,8 @@ namespace TSST_Menadzer
                         }
                         if(potwierdzenie)
                         {
- menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To CC" + menadzer.id_CC + "# ConnectionRequest(" + przekaz[2] + ", " +adres1 + ", " + przekaz[3] +", " +adres2+ ", " + przekaz[4] + ", " + przekaz[5] + ")");
-                        wyslij("Sygnalizuj#" + menadzer.id + "#" + menadzer.id_CC + "#ConnectionRequest#" + przekaz[2] + "#" +adres1 + "#" + przekaz[3] + "#" +adres2+"#" + przekaz[4] + "#" + przekaz[5]);
+ menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To CC" + menadzer.id_CC + "# ConnectionRequest(" + przekaz[2] + ", " +adres1 + ", " + przekaz[3] +", " +adres2+ ", " + tmp.przep + ", " + przekaz[5] + ")");
+                        wyslij("Sygnalizuj#" + menadzer.id + "#" + menadzer.id_CC + "#ConnectionRequest#" + przekaz[2] + "#" +adres1 + "#" + przekaz[3] + "#" +adres2+"#" + tmp.przep + "#" + przekaz[5]);
                         }
                        
                     }
@@ -392,7 +392,7 @@ namespace TSST_Menadzer
                         menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To " + tmp.pocz + "# CallRequest(" + przekaz[2] + ", " + przekaz[3] + ", "+przekaz[4]+ ", " + przekaz[5]+", " + ", REJECTION)");
                         string[] split_id = przekaz[2].Split(new char[] { '@' });
                         if (menadzer.czy_jest_w_mojej_podsieci(split_id[0]))
-                            wyslij("Sygnalizuj#" + menadzer.id + "#" + split_id[0] + "#CallRequest#" + przekaz[2] + "#" + przekaz[3] + "#" +przekaz[4] + "#" +przekaz[5] + "#REJECTION#");
+                            wyslij("Sygnalizuj#" + menadzer.id + "#" + split_id[0] + "#CallRequest#" + przekaz[2] + "#" + przekaz[3] + "#" +przekaz[4] + "#" +przekaz[5] + "#REJECTION");
                         release_chec(przekaz[5]);
                     }
                     else if (przekaz[6].Equals("RELEASE"))
@@ -414,8 +414,8 @@ namespace TSST_Menadzer
                         }
                         if (potwierdzenie)
                         {
-                            menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To CC" + menadzer.id_CC + "# ConnectionRequest(" + przekaz[2] + ", " + adres1 + ", " + przekaz[3] + ", " + adres2 + ", " + przekaz[4] + ", " + przekaz[5] + "RELEASE" +")");
-                            wyslij("Sygnalizuj#" + menadzer.id + "#" + menadzer.id_CC + "#ConnectionRequest#" + przekaz[2] + "#" + adres1 + "#" + przekaz[3] + "#" + adres2 + "#" + przekaz[4] + "#" +  przekaz[5] + "#RELEASE");
+                            menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To CC" + menadzer.id_CC + "# ConnectionRequest(" + przekaz[2] + ", " + adres1 + ", " + przekaz[3] + ", " + adres2 + ", " +tmp.przep + ", " + przekaz[5] + "RELEASE" +")");
+                            wyslij("Sygnalizuj#" + menadzer.id + "#" + menadzer.id_CC + "#ConnectionRequest#" + przekaz[2] + "#" + adres1 + "#" + przekaz[3] + "#" + adres2 + "#" + tmp.przep + "#" +  przekaz[5] + "#RELEASE");
                             menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To " + przekaz[3] + "# CallRelease(" + przekaz[2] + ", "  + przekaz[3] + ", " +przekaz[5]+ ")");
                             string[] split_id = przekaz[2].Split(new char[] { '@' });
                             if (menadzer.czy_jest_w_mojej_podsieci(split_id[0]))
@@ -525,10 +525,9 @@ chec_tmp.nas = id_NCC;
                     }
                     else
                     {
-                        menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To " + przekaz[3] + "# CallRelease(" + tmp.pocz+ ", " + tmp.kon + ", " +tmp.id_unk + ")");
-                        string[] split_id = przekaz[3].Split(new char[] { '@' });
-                        if (menadzer.czy_jest_w_mojej_podsieci(split_id[0]))
-                            wyslij("Sygnalizuj#" + menadzer.id + "#" + split_id[0] + "#CallRelease#" + tmp.pocz + "#" + tmp.kon + "#" + tmp.id_unk);
+                        menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To " + tmp.kon + "# CallRelease(" + tmp.pocz+ ", " + tmp.kon + ", " +tmp.id_unk + ")");
+                    
+                            wyslij("Sygnalizuj#" + menadzer.id + "#" + tmp.kon + "#CallRelease#" + tmp.pocz + "#" + tmp.kon + "#" + tmp.id_unk);
                     }
 
                    
@@ -598,7 +597,7 @@ chec_tmp.nas = id_NCC;
                     {
 
                         menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To NCC " + tmp.zwr+ "# CallCoordination(" + przekaz[1] + ", " + przekaz[2] + ", " + przekaz[4] + ", REJECTION)");
-                        wyslij("Sygnalizuj#" + menadzer.id + "#" + tmp.zwr + "#CallCoordination#" + przekaz[1] + "#" + przekaz[2] + "# #" + przekaz[4] + "#REJECTION#");
+                        wyslij("Sygnalizuj#" + menadzer.id + "#" + tmp.zwr + "#CallCoordination#"+menadzer.id+"#" + przekaz[1] + "#" + przekaz[2] + "# #" + przekaz[4] + "#REJECTION");
                         release_chec(przekaz[4]);
                     }
                 } else

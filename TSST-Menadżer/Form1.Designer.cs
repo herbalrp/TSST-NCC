@@ -203,7 +203,7 @@
             // 
             this.richTextBox2.Location = new System.Drawing.Point(916, 12);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(353, 683);
+            this.richTextBox2.Size = new System.Drawing.Size(792, 683);
             this.richTextBox2.TabIndex = 10;
             this.richTextBox2.Text = "";
             // 
@@ -242,7 +242,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1281, 832);
+            this.ClientSize = new System.Drawing.Size(1720, 832);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.comboBox2);
