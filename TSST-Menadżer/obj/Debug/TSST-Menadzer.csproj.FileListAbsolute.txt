@@ -7,3 +7,6 @@ C:\Users\Mateusz\documents\visual studio 2015\Projects\TSST-Menadżer\TSST-Menad
 C:\Users\Mateusz\documents\visual studio 2015\Projects\TSST-Menadżer\TSST-Menadżer\obj\Debug\TSST-Menadzer.csproj.GenerateResource.Cache
 C:\Users\Mateusz\documents\visual studio 2015\Projects\TSST-Menadżer\TSST-Menadżer\obj\Debug\TSST-Menadżer.exe
 C:\Users\Mateusz\documents\visual studio 2015\Projects\TSST-Menadżer\TSST-Menadżer\obj\Debug\TSST-Menadżer.pdb
+C:\Users\Mateusz\Source\Repos\TSST-NCC\TSST-Menadżer\bin\Debug\TSST-Menadżer.exe.config
+C:\Users\Mateusz\Source\Repos\TSST-NCC\TSST-Menadżer\obj\Debug\TSST-Menadżer.exe
+C:\Users\Mateusz\Source\Repos\TSST-NCC\TSST-Menadżer\obj\Debug\TSST-Menadżer.pdb
