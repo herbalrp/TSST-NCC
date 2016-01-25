@@ -352,7 +352,7 @@ namespace TSST_Menadzer
                         if (potwierdzenie)
                         {
                             menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To CC" + menadzer.id_CC + "# ConnectionRequest(" + przekaz[2] + ", " + adres1 + ", " + przekaz[3] + ", " + adres2 + ", "+przekaz[4] + ", "+przekaz[5]+ ", " + "RELEASE" + ")");
-                            wyslij("Sygnalizuj#" + menadzer.id + "#" + menadzer.id_CC + "#ConnectionRequest#" + przekaz[2] + "#" + adres1 + "#" + przekaz[3] + "#" + adres2 + "#" + przekaz[4] + "#" +przekaz[5]+ "RELEASE");
+                            wyslij("Sygnalizuj#" + menadzer.id + "#" + menadzer.id_CC + "#ConnectionRequest#" + przekaz[2] + "#" + adres1 + "#" + przekaz[3] + "#" + adres2 + "#0" + "#" +przekaz[5]+ "#" + "RELEASE");
                             menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To " + przekaz[3] + "# CallRelease(" + przekaz[2] + ", " + przekaz[3] + ", "  +przekaz[5]+ ")");
                             string[] split_id = przekaz[2].Split(new char[] { '@' });
                             if (menadzer.czy_jest_w_mojej_podsieci(split_id[0]))
