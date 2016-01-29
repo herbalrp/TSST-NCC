@@ -518,8 +518,8 @@ chec_tmp.nas = id_NCC;
                 
                 if (tmp.zwr != null)
                 {//gdy węzeł nadawczy nie jest w domenie
-                    menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To NCC " + tmp.zwr + "# CallCoordination(" + tmp.pocz + "," + tmp.kon + ", " + tmp.id_unk + ", " + przekaz[2] + ")");
-                    wyslij("Sygnalizuj#" + menadzer.id + "#" + tmp.zwr + "#CallCoordination#" + menadzer.id + "#" + tmp.pocz + "#" + tmp.kon + "#" + " #" + tmp.id_unk + "#" + przekaz[2]);
+                   // menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To NCC " + tmp.zwr + "# CallCoordination(" + tmp.pocz + "," + tmp.kon + ", " + tmp.id_unk + ", " + przekaz[2] + ")");
+                    //wyslij("Sygnalizuj#" + menadzer.id + "#" + tmp.zwr + "#CallCoordination#" + menadzer.id + "#" + tmp.pocz + "#" + tmp.kon + "#" + " #" + tmp.id_unk + "#" + przekaz[2]);
                    
                     
                 }
@@ -555,7 +555,7 @@ chec_tmp.nas = id_NCC;
 
                         menadzer.dodaj_log(DateTime.Now.ToLongTimeString() + "#To NCC " + tmp.zwr + "# CallCoordination(" + przekaz[1] + ", " + przekaz[2] + ", " + przekaz[4] + ", CONFIRMATION)");
                         wyslij("Sygnalizuj#" + menadzer.id + "#" + tmp.zwr + "#CallCoordination#" + menadzer.id + "#" + przekaz[1] + "#" + przekaz[2] + "# #" + przekaz[4] + "#CONFIRMATION");
-                        release_chec(przekaz[4]);
+                       
 
                     }
                     else if (przekaz[5].Equals("REJECTION"))
